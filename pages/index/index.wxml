@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">  
+  <view class="top">
+    <view>{{weather.city}}</view>
+    <!-- <view>{{weather.daily_forecast.formattedDate}}</view>
+    <view>{{weather.current.formattedTime}} 更新</view> -->
+  </view>
+  <!-- <view class="topRegion">
+    <view id="temperature" >{{weather.current.temperature}}℃</view>
+    <view id="summary" >{{weather.current.summary}}</view>
+  </view> -->
+  <view class="summary" >
+    <view>三天天气预报</view>
+    <!-- <view style="margin-top:20rpx">{{weather.daily.summary}}</view> -->
+  </view>
+  <view class="daily" >
+    <view class="daily_item" wx:for="{{weather.daily_forecast}}">
+      <view class="daily_weekday" >{{item.cond_txt_n}}</view>
+      <view class="daily_temperature" >{{item.tmp_max}}-{{item.tmp_min}}℃ </view>      
+      <view class="daily_summary" >{{item.date}}</view>
+    </view>
+  </view>
+</view>
